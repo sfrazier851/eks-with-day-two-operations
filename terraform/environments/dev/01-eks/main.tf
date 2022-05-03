@@ -2,7 +2,7 @@ terraform {
   required_version = "= 0.11.2"
 
   backend "s3" {
-    bucket = "cs-eks-example-solution"
+    bucket = "eks-daytwo-tf-state" #"cs-eks-example-solution"
     key    = "dev/01-eks.tf"
     region = "us-east-1"
   }
@@ -10,6 +10,7 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
+  version = "v2.70.0"
 }
 
 
@@ -17,7 +18,7 @@ data "terraform_remote_state" "00-base-infra" {
   backend = "s3"
 
   config {
-    bucket = "cs-eks-example-solution"
+    bucket = "eks-daytwo-tf-state" #"cs-eks-example-solution"
     key    = "dev/00-base-infra.tf"
     region = "us-east-1"
   }

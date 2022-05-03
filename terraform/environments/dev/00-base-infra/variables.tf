@@ -31,7 +31,7 @@ variable "aws_cidr_subnets_public" {
 ## bastion vars
 # specific bastion vars
 variable "aws_ssh_key_name" {
-  default = "cs-win-east-1-getsome"
+  default = "eks-daytwo-east1-key" #"cs-win-east-1-getsome"
 }
 
 variable "aws_bastion_vol_size" {
@@ -51,8 +51,9 @@ variable "aws_bastion_count" {
 # SEE module vars for leveraging ami filter
 # NOTE: hardcoding this for now!
 # ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20190913 - ami-04763b3055de4860b
+# ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20220308 - ami-0d73480446600f555
 variable "aws_bastion_ami" {
-  default = "ami-04763b3055de4860b"
+  default = "ami-0d73480446600f555"
 }
 
 

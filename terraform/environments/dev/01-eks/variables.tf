@@ -23,7 +23,7 @@ variable "eks_node_max" {
 }
 
 variable "eks_version" {
-  default = "1.14"
+  default = "1.19" #"1.14"
 }
 
 #VPC Vars

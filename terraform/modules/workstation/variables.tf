@@ -12,7 +12,7 @@ variable "eks_cluster_version" {
 
 #NOTE: this is a role created outside of this tf.
 variable "workstation_instance_profile_name" {
-  default = "tf-privileged"
+  default = "eks-daytwo-tf-privileged"  #"tf-privileged"
 }
 variable "vpc_id" {
   description = "id of vpc"
@@ -29,7 +29,7 @@ variable "default_tags" {
 
 variable "workstation_ami" {
   description = "ami id for workstation"
-  default        = "ami-04763b3055de4860b"
+  default        = "ami-0d73480446600f555" #"ami-04763b3055de4860b"
 }
 
 #NOTE feel free to leverage the filter. Be sure to update the ami main.tf

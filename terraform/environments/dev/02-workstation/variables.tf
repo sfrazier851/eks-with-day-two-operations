@@ -14,11 +14,11 @@ variable "default_tags" {
 ##
 variable "eks_cluster_version" {
   description = "version of eks cluster"
-  default = "1.14.0"
+  default = "1.19.0" #"1.14.0"
 }
 
 variable "aws_ssh_key_name" {
-  default = "cs-win-east-1-getsome"
+  default = "eks-daytwo-east1-key" #"cs-win-east-1-getsome"
 }
 
 variable "aws_workstation_vol_size" {
